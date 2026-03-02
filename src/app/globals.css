@@ -2,25 +2,35 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #1a1a1a;
+  /* Nchkay design system */
+  --nchkay-red: #8B1538;
+  --nchkay-red-dark: #6B1029;
+  --nchkay-orange: #E85D04;
+  --nchkay-orange-light: #F48C06;
+  --nchkay-orange-dark: #D35400;
+  /* First Nations movement orange (Orange Shirt Day / Every Child Matters) */
+  --first-nations-orange: #E85D04;
+  --spacing-section: 4rem;
+  --spacing-block: 1.5rem;
+  --radius: 0.5rem;
+  --radius-lg: 0.75rem;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-nchkay-red: var(--nchkay-red);
+  --color-nchkay-red-dark: var(--nchkay-red-dark);
+  --color-nchkay-orange: var(--nchkay-orange);
+  --color-nchkay-orange-light: var(--nchkay-orange-light);
+  --color-nchkay-orange-dark: var(--nchkay-orange-dark);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), system-ui, sans-serif;
 }
