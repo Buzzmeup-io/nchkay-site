@@ -15,6 +15,14 @@
   --spacing-block: 1.5rem;
   --radius: 0.5rem;
   --radius-lg: 0.75rem;
+  /* Capilano park palette */
+  --park-forest: #1a3a2a;
+  --park-pine: #2d5a3f;
+  --park-sage: #5a7d6a;
+  --park-mist: #e8f0ec;
+  --park-cedar: #8b6f47;
+  --park-cedar-light: #c4a876;
+  --park-warm: #faf7f2;
 }
 
 @theme inline {
@@ -27,10 +35,91 @@
   --color-nchkay-orange-dark: var(--nchkay-orange-dark);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-display: var(--font-display);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans), system-ui, sans-serif;
+}
+
+/* Scroll-triggered animation classes */
+.animate-in {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.animate-in.animate-in--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.animate-in--fade {
+  transform: none;
+}
+
+.animate-in--scale {
+  transform: scale(0.95);
+}
+
+.animate-in--scale.animate-in--visible {
+  transform: scale(1);
+}
+
+.animate-in--left {
+  transform: translateX(-32px);
+}
+
+.animate-in--left.animate-in--visible {
+  transform: translateX(0);
+}
+
+.animate-in--right {
+  transform: translateX(32px);
+}
+
+.animate-in--right.animate-in--visible {
+  transform: translateX(0);
+}
+
+/* Hero shimmer */
+@keyframes hero-drift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+/* Noise texture overlay */
+.noise-overlay::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+  background-size: 256px 256px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Diagonal pattern */
+.diagonal-pattern::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 40px,
+    rgba(255, 255, 255, 0.015) 40px,
+    rgba(255, 255, 255, 0.015) 41px
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Pulse glow for CTA */
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(232, 93, 4, 0.3); }
+  50% { box-shadow: 0 0 24px 4px rgba(232, 93, 4, 0.15); }
 }
