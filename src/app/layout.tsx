@@ -1,26 +1,15 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, DM_Serif_Display, Atkinson_Hyperlegible_Mono } from "next/font/google";
+import { Inter, DM_Serif_Display } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
 });
 
 const dmSerif = DM_Serif_Display({
   variable: "--font-display",
   weight: "400",
-  subsets: ["latin"],
-});
-
-const atkinsonMono = Atkinson_Hyperlegible_Mono({
-  variable: "--font-atkinson",
-  weight: "700",
   subsets: ["latin"],
 });
 
@@ -37,7 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${dmSerif.variable} ${atkinsonMono.variable} antialiased`}
+        className={`${inter.variable} ${dmSerif.variable} antialiased`}
       >
         {children}
       </body>

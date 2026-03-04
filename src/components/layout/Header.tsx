@@ -23,12 +23,12 @@ export function Header() {
             priority
           />
         </Link>
-        <nav className="flex items-center gap-1 text-sm font-bold sm:gap-4" style={{ fontFamily: "var(--font-atkinson), monospace" }}>
+        <nav className="flex items-center gap-6 text-sm font-semibold tracking-wide sm:gap-8">
           {NAV_LINKS.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className="rounded-md px-2 py-1.5 text-gray-700 transition-colors hover:bg-gray-100 hover:text-[var(--nchkay-red)] sm:px-3"
+              className="text-gray-700 transition-colors hover:text-[var(--nchkay-red)]"
             >
               {link.label}
             </Link>

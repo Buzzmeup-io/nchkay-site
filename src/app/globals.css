@@ -33,8 +33,7 @@
   --color-nchkay-orange: var(--nchkay-orange);
   --color-nchkay-orange-light: var(--nchkay-orange-light);
   --color-nchkay-orange-dark: var(--nchkay-orange-dark);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-inter);
   --font-display: var(--font-display);
 }
 
