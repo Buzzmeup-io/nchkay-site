@@ -64,33 +64,21 @@ export default function CapilanoRvParkPage() {
   return (
     <div className="overflow-hidden">
       {/* ── Hero ──────────────────────────────────────── */}
-      <section className="noise-overlay diagonal-pattern relative flex min-h-[85vh] flex-col justify-end overflow-hidden bg-[var(--park-forest)]">
-        {/* Gradient layers */}
-        <div
-          className="absolute inset-0"
-          style={{
-            background:
-              "radial-gradient(ellipse 120% 80% at 30% 80%, rgba(45,90,63,0.7) 0%, transparent 60%), radial-gradient(ellipse 100% 60% at 80% 20%, rgba(26,58,42,0.9) 0%, transparent 50%)",
-          }}
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-[var(--park-forest)] via-transparent to-[var(--park-forest)]/30" />
+      <section className="relative flex min-h-[85vh] flex-col justify-end overflow-hidden bg-[var(--park-forest)]">
+        {/* Background video */}
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute inset-0 h-full w-full object-cover"
+        >
+          <source src="/hero-video.mp4" type="video/mp4" />
+        </video>
 
-        {/* Topographic decorative lines */}
-        <div className="absolute inset-0 overflow-hidden opacity-[0.04]">
-          {[...Array(8)].map((_, i) => (
-            <div
-              key={i}
-              className="absolute rounded-full border border-white"
-              style={{
-                width: `${300 + i * 160}px`,
-                height: `${200 + i * 100}px`,
-                top: `${20 + i * 5}%`,
-                left: `${10 + i * 3}%`,
-                transform: `rotate(${-15 + i * 4}deg)`,
-              }}
-            />
-          ))}
-        </div>
+        {/* Dark overlay for text readability */}
+        <div className="absolute inset-0 bg-black/45" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
 
         <div className="relative z-10 mx-auto w-full max-w-6xl px-6 pb-20 pt-40 sm:px-8 lg:pb-28">
           <AnimateIn variant="fade" delay={100}>

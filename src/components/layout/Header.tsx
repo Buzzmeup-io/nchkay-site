@@ -23,7 +23,7 @@ export function Header() {
             priority
           />
         </Link>
-        <nav className="flex items-center gap-1 text-sm font-medium sm:gap-4">
+        <nav className="flex items-center gap-1 text-sm font-bold sm:gap-4" style={{ fontFamily: "var(--font-atkinson), monospace" }}>
           {NAV_LINKS.map((link) => (
             <Link
               key={link.href}
