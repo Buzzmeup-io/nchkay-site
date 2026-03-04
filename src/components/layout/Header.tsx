@@ -2,11 +2,12 @@ import Link from "next/link";
 import Image from "next/image";
 
 const NAV_LINKS = [
-  { href: "/", label: "Portfolio" },
-  { href: "/capilano-rv-park", label: "Capilano RV Park" },
-  { href: "/directory", label: "Directory" },
-  { href: "/design", label: "Design" },
-  { href: "/working-with-us", label: "Working with us" },
+  { href: "/sites", label: "Sites & Rates" },
+  { href: "/amenities", label: "Amenities" },
+  { href: "/activities", label: "Activities" },
+  { href: "/location", label: "Location" },
+  { href: "/reservations", label: "Reservations" },
+  { href: "/contact", label: "Contact" },
 ];
 
 export function Header() {
@@ -22,7 +23,7 @@ export function Header() {
             priority
           />
         </Link>
-        <nav className="flex items-center gap-1 text-sm font-medium sm:gap-5">
+        <nav className="flex items-center gap-1 text-sm font-medium sm:gap-4">
           {NAV_LINKS.map((link) => (
             <Link
               key={link.href}

@@ -1,8 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
 
-const TAGLINE = "An Nch'ḵay̓ property for the Squamish people";
-
 export function Footer() {
   return (
     <footer className="border-t border-gray-200 bg-gray-50">
@@ -15,34 +13,31 @@ export function Footer() {
               width={120}
               height={36}
             />
-            <span className="text-sm text-gray-600">{TAGLINE}</span>
+            <span className="text-sm text-gray-600">Capilano River RV Park</span>
           </div>
           <div className="flex flex-wrap items-center justify-center gap-6 text-sm">
-            <Link href="/" className="text-gray-600 hover:text-[var(--nchkay-red)]">
-              Portfolio
+            <Link href="/sites" className="text-gray-600 hover:text-[var(--nchkay-red)]">
+              Sites & Rates
             </Link>
-            <Link href="/capilano-rv-park" className="text-gray-600 hover:text-[var(--nchkay-red)]">
-              Capilano RV Park
+            <Link href="/amenities" className="text-gray-600 hover:text-[var(--nchkay-red)]">
+              Amenities
             </Link>
-            <Link href="/directory" className="text-gray-600 hover:text-[var(--nchkay-red)]">
-              Directory
+            <Link href="/activities" className="text-gray-600 hover:text-[var(--nchkay-red)]">
+              Activities
             </Link>
-            <Link href="/design" className="text-gray-600 hover:text-[var(--nchkay-red)]">
-              Design
+            <Link href="/location" className="text-gray-600 hover:text-[var(--nchkay-red)]">
+              Location
             </Link>
-            <Link href="/working-with-us" className="text-gray-600 hover:text-[var(--nchkay-red)]">
-              Working with us
+            <Link href="/reservations" className="text-gray-600 hover:text-[var(--nchkay-red)]">
+              Reservations
             </Link>
-            <a
-              href="mailto:hello@example.com"
-              className="font-medium text-[var(--nchkay-red)] hover:underline"
-            >
-              Get in touch
-            </a>
+            <Link href="/contact" className="text-gray-600 hover:text-[var(--nchkay-red)]">
+              Contact
+            </Link>
           </div>
         </div>
         <p className="mt-6 text-center text-xs text-gray-500">
-          © {new Date().getFullYear()} Nch'ḵay̓ Development Corporation. Sḵwx̱wú7mesh Úxwumixw.
+          © {new Date().getFullYear()} Nch&apos;ḵay̓ Development Corporation. Sḵwx̱wú7mesh Úxwumixw.
         </p>
       </div>
     </footer>

@@ -79,7 +79,7 @@ export default function ReservationsPage() {
             </h2>
             <p className="mt-3 text-gray-500">
               For full rate tables, visit the{" "}
-              <Link href="/capilano-rv-park/sites" className="text-[var(--nchkay-orange)] hover:underline">
+              <Link href="/sites" className="text-[var(--nchkay-orange)] hover:underline">
                 Sites & Rates
               </Link>{" "}
               page.

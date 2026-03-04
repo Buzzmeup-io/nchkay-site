@@ -205,7 +205,7 @@ export default function SitesPage() {
             <p className="mt-6 text-sm text-gray-500">
               All rates include 5% GST. Weekly rates available Oct–Apr with
               manager approval.{" "}
-              <Link href="/capilano-rv-park/reservations" className="text-[var(--nchkay-orange)] hover:underline">
+              <Link href="/reservations" className="text-[var(--nchkay-orange)] hover:underline">
                 View booking policies →
               </Link>
             </p>
